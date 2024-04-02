@@ -3,10 +3,71 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root .theme_dark {
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --text-color: #F1B2CE;
+}
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+
+  background-image: url(../images/cover-image-dark.png);
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--accent-color)
+  }
+
+  .header__theme-menu-button {
+    color: var(--accent-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(255, 0, 112, 0.4);
+  }
+
+  .header__theme-menu-button:focus {
+    outline: none;
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  .header__theme-rec {
+    display: block;
+  }
+
+  .section__title {
+    color: var(--accent-color);
+  }
+
+  .section__text {
+    color: var(--text-color);
+  }
+
+  .section__text-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .section__text-link:focus {
+    outline: 1px solid;
+  }
+
+  .header::before {
+    border-right: 1px solid var(--accent-color);
+    border-top: 1px solid var(--accent-color);
+  }
+
+  .header::after {
+    border-left: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  .footer::before {
+    border-right: 1px solid var(--accent-color);
+    border-top: 1px solid var(--accent-color);
+  }
+
+  .footer::after {
+    border-left: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+  }
 }
