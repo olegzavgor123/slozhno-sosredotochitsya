@@ -4,6 +4,9 @@
 */
 :root {
   --accent-color: #FF0070;
+  --background-color: #ff0070;
+  --shadow-color: #ff0070;
   --title-color: #DB00FF;
+  --title-shadow: #FF0070;
   --text-color: #F1B2CE;
 }
