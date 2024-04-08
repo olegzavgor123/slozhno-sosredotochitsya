@@ -91,9 +91,12 @@
   border: 1px solid rgba(255, 0, 112, 0.4);
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--accent-color);
-  outline: none;
 }
 
 .header__theme-menu-button_active {
@@ -170,6 +173,10 @@
 
 .section__text-link:hover {
   border-bottom: 1px solid var(--text-color);
+}
+
+.section__text-link:focus {
+  outline: none;
 }
 
 .section__text-link:focus-visible {
@@ -308,6 +315,22 @@
 
   .main-title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin: 65px 10px 55px 10px;
+  }
+
+  .header::before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .header::after {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .header__theme-text {
+    max-inline-size: 100%;
+    margin: 0 10px 66px 10px;
   }
 
   .content {
@@ -345,7 +368,7 @@
   }
 
   .section__images {
-    margin-block-end: 40px;
+    margin-block-end: 37px;
   }
 
   .section__images-block {
@@ -354,7 +377,7 @@
   }
 
   .block-img:not(:last-child) {
-    margin-block-end: 6px;
+    margin-block-end: 5px;
   }
 
 }
@@ -363,16 +386,6 @@
 
   .header {
     margin-block-end: 40px;
-  }
-
-  .header::before {
-    top: 10px;
-    right: 10px;
-  }
-
-  .header::after {
-    bottom: 10px;
-    left: 10px;
   }
 
   .header__theme-rec::before {
@@ -390,43 +403,18 @@
     margin-inline-end: 10px;
   }
 
-  .header__theme-title {
-    margin: 65px 10px 55px 10px;
-  }
-
   .header__theme-text {
     margin: 0 10px 0 10px;
     max-inline-size: 100%;
   }
 
   .footer::before {
-    top: 3px;
+    top: 10px;
     right: 10px;
   }
 
   .footer::after {
-    bottom: 17px;
+    bottom: 10px;
     left: 10px;
-  }
-}
-
-/* ----------------------------------------------LIGHT-------------------------------------------------------------- */
-
-@media (prefers-color-scheme: light) {
-
-  .page {
-    background-image: url(../images/cover-image-light.png);
-  }
-
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(50, 49, 45, 0.4);
-  }
-}
-
-.page.theme_light {
-  background-image: url(../images/cover-image-light.png);
-
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(50, 49, 45, 0.4);
   }
 }
